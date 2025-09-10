@@ -2,13 +2,13 @@
 
 agent any // Runs on any available agent
 stages {
-stage('Build') {
+stage('clone') {
 steps {
-echo 'Building the application...'
+git branch: 'main', credentialsId: '3aab4c23-6378-4359-9c0b-827ea2b8243e', url: 'https://github.com/Rudra4536/jenkins_B458'
 }
 }
 
-stage('Test') {
+stage('compile') {
 steps {
 echo 'Running tests...'
 }
