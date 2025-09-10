@@ -10,7 +10,7 @@ git branch: 'main', credentialsId: '3aab4c23-6378-4359-9c0b-827ea2b8243e', url: 
 
 stage('compile') {
 steps {
-echo 'Running tests...'
+bat 'javac hello.java'
 }
 
 }
@@ -18,7 +18,7 @@ echo 'Running tests...'
 stage('Run') {
 
 steps {
-echo 'Deploying the application...'
+bat 'java hello'
 }
 
 }
